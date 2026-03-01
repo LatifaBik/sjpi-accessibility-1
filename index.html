@@ -33,13 +33,16 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
     <!-- Endast en `<title>` används; flera kan orsaka oväntat beteende och påverka SEO samt tillgänglighet negativt. -->
     <title>A11y News</title>
     <title>A11y News dupe</title>
+    
 </head>
 
 <body>
+  
     <!-- Navigeringsmeny med dubblett-ID:n, inkonsekvent tabindex, och brutna länkar till en 404-sida. -->
     <nav class="navigation">
         <span class="nav-item" id="1" tabindex="-1"><a href="404.html" target="_blank">Home</a></span>
@@ -115,7 +118,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
     </div>
 
 
-    <script src="script.js" defer></script>
+     <script src="script.js" defer></script>
 </body>
 
 </html>
