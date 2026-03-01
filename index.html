@@ -28,7 +28,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
 
 <!DOCTYPE html>
 <!-- Vad händer när man kommenterar bort språket? -->
-<!-- <html lang="en"> -->
+<html lang="en"> 
 
 <head>
     <meta charset="UTF-8">
@@ -38,11 +38,11 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
     <!-- Endast en `<title>` används; flera kan orsaka oväntat beteende och påverka SEO samt tillgänglighet negativt. -->
     <title>A11y News</title>
     <title>A11y News dupe</title>
-    
+
 </head>
 
 <body>
-  
+
     <!-- Navigeringsmeny med dubblett-ID:n, inkonsekvent tabindex, och brutna länkar till en 404-sida. -->
     <nav class="navigation">
         <span class="nav-item" id="1" tabindex="-1"><a href="404.html" target="_blank">Home</a></span>
@@ -50,7 +50,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
         <span class="nav-item" id="1"><a href="404.html">Sports</a></span>
         <span class="nav-item" id="1"><a href="404.html" target="_blank">Entertainment</a></span>
     </nav>
-
+<main>
     <!-- Svåråtkomligt inputfällt -->
     <div class="input-container">
         <input type="text" placeholder="Enter text">
@@ -82,9 +82,9 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
 
             <!-- Bilder visas inte, varför? -->
             <div class="image-container">
-                <img src="/images/ocean.jpg">
-                <img src="/images/city.jpg">
-                <img src="/images/family.jpg">
+                <img src="/images/ocean.jpg" alt="Ocean view">
+                <img src="/images/city.jpg" alt="City skyline">
+                <img src="/images/family.jpg" alt="Family celebrating">
             </div>
 
             <p>Access the news by pressing the images</p>
@@ -93,7 +93,8 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
         <!-- Allt för stor bild. För att motverka prestanda problem, ha koll på storleken på bilden -->
         <div class="article" style="display: none;">
             <p class="headline">Se en 50MB bild ladda långsamt!</p>
-            <img src="http://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg" width="50000">
+            <img src="http://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg" width="50000"
+                alt="Close-up photo of a pink flower" width="5000">
         </div>
 
         <!-- Videor kräver mycket prestanda, kan vi ändra eller ta bort för att åstakomma bättre resultat -->
@@ -107,18 +108,18 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
     <div id="fake-ad">
         <div class="top-section">
             <div class="image-container">
-                <img class="rotating-image" src="images/chest.png">
+                <img class="rotating-image" src="images/chest.png" alt="Treasure chest">
             </div>
             <p>🎉 You have won $10,000! 🎉</p>
             <div class="image-container">
-                <img class="rotating-image" src="images/chest.png">
+                <img class="rotating-image" src="images/chest.png" alt="Treasure chest">
             </div>
         </div>
         <p class="btext">Click here to collect your money!</p>
     </div>
 
-
-     <script src="script.js" defer></script>
+ </main>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
