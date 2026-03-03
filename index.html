@@ -41,7 +41,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
 
 <body>
     <header>
-         <h1>A11y News</h1>
+        <h1>A11y News</h1>
         <nav class="navigation">
             <ul>
                 <li><a href="404.html">Home</a></li>
@@ -64,12 +64,11 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
         <!-- Dold text och klickbar div. 
      .hidden-text är nästan osynlig p.g.a. låg opacity och roterad tex -->
         <p class="hidden-text">This text is invisible.</p>
-        <div class="button">Click here!</div>
+        <button class="button">
+            Read more about the discovery
+        </button>
+
         <div class="container">
-
-
-
-
             <div class="article">
                 <!-- <marquee>(rullande text) kan vara en intressant effekt på en hemsida, men det kan också vara distraherande för besökarna. -->
                 <div class="headline">Breaking News: ...!</div>
@@ -79,6 +78,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
                     research and
                     biotechnology.</p>
                 <a href="404.html">Click here!</a>
+
             </div>
 
             <!-- Klicka på artikeln för att visa ett meddelande, men den utför egentligen inget. -->
@@ -86,33 +86,33 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
                 Lunar New Year: Celebrate with us!
             </button>
 
-                <!-- Bilder visas inte, varför? -->
-                <div class="image-container">
-                    <img src="images/ocean.jpg" alt="Ocean view">
-                    <img src="images/city.jpg" alt="City skyline">
-                    <img src="images/family.jpg" alt="Family celebrating">
-                </div>
-
-                <p>Access the news by pressing the images</p>
+            <!-- Bilder visas inte, varför? -->
+            <div class="image-container">
+                <img src="images/ocean.jpg" alt="Ocean view">
+                <img src="images/city.jpg" alt="City skyline">
+                <img src="images/family.jpg" alt="Family celebrating">
             </div>
 
-            <!-- Allt för stor bild. För att motverka prestanda problem, ha koll på storleken på bilden -->
-            <div class="article" style="display: none;">
-                <p class="headline">Se en 50MB bild ladda långsamt!</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg"
-                    alt="Close-up photo of a pink flower" loading="lazy" width="600" height="400">
-            </div>
+            <p>Access the news by pressing the images</p>
+        </div>
 
-            <!-- Videor kräver mycket prestanda, kan vi ändra eller ta bort för att åstakomma bättre resultat -->
-            <div class="article">
-                <video muted loop preload="none" width="480" height="270">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                </video>
+        <!-- Allt för stor bild. För att motverka prestanda problem, ha koll på storleken på bilden -->
+        <div class="article" style="display: none;">
+            <p class="headline">Se en 50MB bild ladda långsamt!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg"
+                alt="Close-up photo of a pink flower" loading="lazy" width="600" height="400">
+        </div>
 
-                <video autoplay muted loop src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
-                <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Animated giphy image"
-                    loading="lazy" width="480" height="270">
-            </div>
+        <!-- Videor kräver mycket prestanda, kan vi ändra eller ta bort för att åstakomma bättre resultat -->
+        <div class="article">
+            <video muted loop preload="none" width="480" height="270">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+
+            <video autoplay muted loop src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+            <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Animated giphy image"
+                loading="lazy" width="480" height="270">
+        </div>
         </div>
 
         <!-- En irriterande annons som alltid syns och innehåller en snurrande bild samt en vilseledande text -->
