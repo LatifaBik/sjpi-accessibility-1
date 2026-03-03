@@ -22,6 +22,16 @@ document.body.prepend(msg);
 
 
 // Ändrar bakgrund mer sällan 
+
+const main = document.querySelector("main");
+
+const div = document.createElement("div");
+div.innerHTML = `
+  <h2 style="color:black;">HELLO</h2>
+  <p>Inserted without document.write()</p>
+`;
+
+main.appendChild(div);
 setInterval(() => {
   document.body.style.backgroundColor =
     "#" + Math.floor(Math.random() * 16777215).toString(16);
