@@ -16,20 +16,26 @@ setInterval(() => {
 
 // Ersätter document.write med DOM 
 const msg = document.createElement("div");
-msg.innerHTML = "<h2 style='color:black;'>HELLO</h2><p>Inserted without document.write()</p>";
+msg.innerHTML = "<h2 style='color:white;'>HELLO</h2><p>Inserted without document.write()</p>";
 document.body.prepend(msg);
 
 
 
 // Ändrar bakgrund mer sällan 
 
-const main = document.querySelector("main");
+let main = document.querySelector("main");
+if (!main) {
+  main = document.createElement("main");
+  document.body.appendChild(main);
+}
 
 const div = document.createElement("div");
 div.innerHTML = `
   <h2 style="color:black;">HELLO</h2>
   <p>Inserted without document.write()</p>
 `;
+
+
 
 main.appendChild(div);
 setInterval(() => {
