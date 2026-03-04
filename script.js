@@ -22,7 +22,6 @@ document.body.prepend(msg);
 
 
 // Ändrar bakgrund mer sällan 
-
 let main = document.querySelector("main");
 if (!main) {
   main = document.createElement("main");
@@ -31,11 +30,9 @@ if (!main) {
 
 const div = document.createElement("div");
 div.innerHTML = `
-  <h2 style="color:black;">HELLO</h2>
-  <p>Inserted without document.write()</p>
+  <h2 style="color:white;">HELLO</h2>
+  <p style="color:white;">Inserted without document.write()</p>
 `;
-
-
 
 main.appendChild(div);
 setInterval(() => {
